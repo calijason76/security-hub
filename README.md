@@ -39,7 +39,7 @@ This version does not utilize the multifactor auth section, requiring you to do 
     Prints the count for the y-axis
     Running of the app with a pipe to the feed file is needed as last step and results in the same formatted feed file as the bash version
 
-The PLOTLY DASH APP (app.py):
+THE PLOTLY DASH APP (app.py):
 
 The goal here is to take the feed file generated and break it into two lists that Plotly can use for x and y axis. I was able to do so by the following:
 
