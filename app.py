@@ -26,12 +26,12 @@ color12 = 'B047EC'
 color13 = 'DD770A'
 color14 = '0BF8D0'
 tabtitle = 'SecurityHub'
-sourceurl = 'https://brandpalettes.com/dunkin-donuts-color-codes/'
+sourceurl = 'https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards.html'
 githublink = 'https://github.com/calijason76/security-hub'
 
 ########### Set up the chart
 mydata = go.Pie(
-    hole=0.5,
+    hole=0.9,
     sort=False,
     values=myvalues,
     labels=mylabels,
