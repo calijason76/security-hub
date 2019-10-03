@@ -40,7 +40,7 @@ mydata = go.Pie(
 )
 mylayout = go.Layout(
     title = mytitle
-    annotations=[dict(text='GHG', x=0.18, y=0.5, font_size=20, showarrow=False)]
+    
 )
 fig = go.Figure(data=[mydata], layout=mylayout)
 
