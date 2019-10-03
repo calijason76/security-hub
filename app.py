@@ -31,7 +31,7 @@ githublink = 'https://github.com/calijason76/security-hub'
 
 ########### Set up the chart
 mydata = go.Pie(
-    hole=0.9,
+    hole=0.7,
     sort=False,
     values=myvalues,
     labels=mylabels,
