@@ -19,7 +19,7 @@ My initial approach was to write the script in Bash as that is most familiar and
 
 **THE BASH VERSION (aws_noncompliance_counts_class.sh):**
 
-The script invokes a MultiFactor Auth used by my company called Okta to connect to an AWS account. It does two loop statements, 1 to pull the ConfigRuleNames into a list, the next loop reads that list and grabs the non-compliance counts. The resulting data is piped to a feed file with the format:
+The script invokes a MultiFactor Auth used by my company called Okta to connect to an AWS account. It does two loop statements, 1 to pull the ConfigRuleNames into a list, the next loop reads that list and grabs the non-compliance counts. The values are extracted by utilizing 'jq'. The resulting data is piped to a feed file with the format:
 
     configrulename
     count
@@ -49,3 +49,5 @@ The goal here is to take the feed file generated and break it into two lists tha
     I now need to use list splicing to break the long list out into two lists: one for strings (label), one for integers (values)
     lines[::2] -- start at position 0 and give me every other value
     lines[1::2] -- start at position 1 and give me every other value
+
+*PRIVACY NOTE: The data was extracted from a developer's sandbox AWS account and does not represent any proprietary info.
