@@ -10,8 +10,7 @@ with open('data.txt') as f:
 myheading = "CIS Benchmarks for AWS"
 mytitle = "Non-Compliance by Rule"
 mylabels = lines[::2]
-myvalues_init = lines[1::2]
-myvalues = [x[:-5] for x in myvalues_init]
+myvalues = lines[1::2]
 color1 = 'e11383'
 color2 = 'f5821f'
 color3 = '683817'
