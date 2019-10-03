@@ -17,7 +17,7 @@ I wanted to use data points that I would pull in my current job. Unfortunately, 
 
 My initial approach was to write the script in Bash as that is most familiar and then write a Python version. I found that AWS CLI tools are easiest to use in BASH as they are designed for it. To extract AWS data using a Python script is a bit more challenging. It requires the use of the package Boto3, which is like a wrapper for the command line tools. Boto3 extracts the data in a nested dict/list/dict/list manner. From there you have to find the value pair for the key you are searching on. 
 
-The BASH version (aws_noncompliance_counts_class.sh):
+THE BASH VERSION (aws_noncompliance_counts_class.sh):
 
 The script invokes a MultiFactor Auth used by my company called Okta to connect to an AWS account. It does two loop statements, 1 to pull the ConfigRuleNames into a list, the next loop reads that list and grabs the non-compliance counts. The resulting data is piped to a feed file with the format:
 
@@ -26,7 +26,7 @@ The script invokes a MultiFactor Auth used by my company called Okta to connect 
     configrulename
     count
 
-The Python version (pytry5.py):
+THE PYTHON VERSION (pytry5.py):
 
 This version does not utilize the multifactor auth section, requiring you to do that piece separately. It imports the Boto3 package, as this is required by the AWS SDK for Python. 
 
@@ -37,3 +37,15 @@ This version does not utilize the multifactor auth section, requiring you to do 
     Prints the x-axis list
     Same thing is repeated for the y-axis list with the exception of a counter being added to output an integer for the number of non-compliance findings
     Prints the count for the y-axis
+    Running of the app with a pipe to the feed file is needed as last step and results in the same formatted feed file as the bash version
+
+The PLOTLY DASH APP (app.py):
+
+The goal here is to take the feed file generated and break it into two lists that Plotly can use for x and y axis. I was able to do so by the following:
+
+    Use the open command in python to load the feed file
+    Specify a new variable 'lines' read each line and using f.read() combined with splitlines(), break the string out when the /n newline character is encountered
+    This results in a list containing [str,int,str,int,str,int]
+    I now need to use list splicing to break the long list out into two lists: one for strings (label), one for integers (values)
+    lines[::2] -- start at position 0 and give me every other value
+    lines[1::2] -- start at position 1 and give me every other value
