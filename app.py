@@ -7,27 +7,27 @@ with open('data.txt') as f:
     lines = f.read().splitlines()
 
 ########### Define your variables ######
-myheading = "What's your favorite Dunkin' Donut?"
-mytitle = "Top 3 Flavors"
+myheading = "CIS Benchmarks for AWS"
+mytitle = "Non-Compliance by Rule"
 mylabels = lines[::2]
 myvalues = lines[1::2]
 color1 = 'e11383'
 color2 = 'f5821f'
 color3 = '683817'
-color4 = 'e11383'
-color5 = 'f5821f'
-color6 = '683817'
-color7 = 'e11383'
-color8 = 'f5821f'
-color9 = '683817'
-color10 = 'e11383'
-color11 = 'f5821f'
-color12 = '683817'
-color13 = 'e11383'
-color14 = 'f5821f'
-tabtitle = 'dunkin'
+color4 = 'DAF7A6'
+color5 = '581845'
+color6 = 'C70039'
+color7 = 'FFC300'
+color8 = '04DD1B'
+color9 = 'DD040B'
+color10 = '9DA8C6'
+color11 = '580DBE'
+color12 = 'B047EC'
+color13 = 'DD770A'
+color14 = '0BF8D0'
+tabtitle = 'SecurityHub'
 sourceurl = 'https://brandpalettes.com/dunkin-donuts-color-codes/'
-githublink = 'https://github.com/austinlasseter/dash-piechart-example'
+githublink = 'https://github.com/calijason76/security-hub'
 
 ########### Set up the chart
 mydata = go.Pie(
