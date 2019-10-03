@@ -50,4 +50,4 @@ The goal here is to take the feed file generated and break it into two lists tha
     lines[::2] -- start at position 0 and give me every other value
     lines[1::2] -- start at position 1 and give me every other value
 
-*PRIVACY NOTE: The data was extracted from a developer's sandbox AWS account and does not represent any proprietary info.
+*PRIVACY NOTE: The data was extracted from a developer's sandbox AWS account and does not represent any proprietary info.*
